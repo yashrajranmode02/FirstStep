@@ -507,7 +507,7 @@ export default function Home() {
       if (xhr.status >= 200 && xhr.status < 300) {
         const res = JSON.parse(xhr.responseText);
         setMessage({ type: "success", text: "Files uploaded successfully!" });
-        setResults(res.results || null);
+        setResults(res|| null);
         setFiles([]);
         setAnswerKey(""); // clear answer key after upload
       } else {
